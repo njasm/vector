@@ -10,7 +10,7 @@ pub struct Runtime {
 
 /// The error raised if the runtime is aborted.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub struct Abort(String);
+pub struct Abort(pub String);
 
 impl fmt::Display for Abort {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
